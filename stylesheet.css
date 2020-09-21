@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Raleway;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
+  text-align: center;
+  background-color: #ecf0f3;
+  color: #0e2db3;
+}
+
+.search-box {
+  border: solid 5px #0e2db3;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px;
+}
+.search-box input[type="text"] {
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  padding: 5px 40px 5px 10px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 50px;
+  transition: width 800ms cubic-bezier(0.5, -0.5, 0.5, 0.5) 600ms;
+  background-color: #ecf0f3;
+}
+.search-box input[type="text"]:focus {
+  outline: none;
+}
+.search-box input[type="text"]:focus, .search-box input[type="text"]:not(:placeholder-shown) {
+  width: 300px;
+  transition: width 800ms cubic-bezier(0.5, -0.5, 0.5, 1.5);
+}
+.search-box input[type="text"]:focus + span, .search-box input[type="text"]:not(:placeholder-shown) + span {
+  bottom: 13px;
+  right: 10px;
+  transition: bottom 300ms ease-out 800ms, right 300ms ease-out 800ms;
+}
+.search-box input[type="text"]:focus + span:after, .search-box input[type="text"]:not(:placeholder-shown) + span:after {
+  top: 0;
+  right: 10px;
+  opacity: 1;
+  transition: top 300ms ease-out 1100ms, right 300ms ease-out 1100ms, opacity 300ms ease 1100ms;
+}
+.search-box span {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -13px;
+  right: -15px;
+  transition: bottom 300ms ease-out 300ms, right 300ms ease-out 300ms;
+}
+.search-box span:before, .search-box span:after {
+  content: '';
+  height: 25px;
+  border-left: solid 5px #0e2db3;
+  position: absolute;
+  transform: rotate(-45deg);
+}
+.search-box span:after {
+  transform: rotate(45deg);
+  opacity: 0;
+  top: -20px;
+  right: -10px;
+  transition: top 300ms ease-out, right 300ms ease-out, opacity 300ms ease-out;
+}
+
+.top-container{
+    width: 80%;
+    padding: 5px;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  /*margin-top: 10px;
+  padding: 50px;
+  padding-top: 20px;
+  border-radius: 20px;*/
+  /*border: solid;
+  border-color: black;*/
+  background-color: #ecf0f3;
+  box-shadow:
+    -8px -4px 8px 0px #ffffff,
+    8px 4px 12px 0px #d1d9e6;
+}
+
+.app-description {
+    font-size: 3vw;
+}
+
+.bottom-container{
+  margin-top: 5px;
+  width: 80%;
+  padding: 5px;
+  border-radius: 20px;
+  /*margin-bottom: 0px;
+  padding-left: 30px;
+  padding-right: 30px;*/
+  /*border: solid;
+  border-color: black;*/
+  background-color: #ecf0f3;
+  box-shadow:
+    -8px -4px 8px 0px #ffffff,
+    8px 4px 12px 0px #d1d9e6;
+}
+
+h1{
+  margin-bottom: 0px;
+  font-size: 7.5vw;
+}
+
+.box-container{
+  margin-top: 0px;
+  margin-bottom: 20px;
+  transform: scale(0.7, 0.7);
+}
+
+.weather-icon {
+    color: beige;
+}
+
+#weather-desc {
+    text-transform: capitalize;
+}
+
+.footer-link {
+    color: #0e2db3;
+}
+
+.search-results {
+    transform: scale(1.2, 1.2);
+}
+
+@media all and (min-width: 632px) {
+    .top-container{
+        width: 570px;
+        padding: 5px;
+        border-radius: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      /*margin-top: 10px;
+      padding: 50px;
+      padding-top: 20px;
+      border-radius: 20px;*/
+      /*border: solid;
+      border-color: black;*/
+      background-color: #ecf0f3;
+      box-shadow:
+        -8px -4px 8px 0px #ffffff,
+        8px 4px 12px 0px #d1d9e6;
+    }
+
+    h1{
+        font-size: 50px;
+    }
+
+    .app-description {
+        font-size: 20px;
+    }
+
+    .box-container{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        transform: scale(1.1, 1.1);
+    }
+
+    .bottom-container{
+        margin-top: 5px;
+        width: 570px;
+        padding: 5px;
+        border-radius: 20px;
+        /*margin-bottom: 0px;
+        padding-left: 30px;
+        padding-right: 30px;*/
+        /*border: solid;
+        border-color: black;*/
+        background-color: #ecf0f3;
+        box-shadow:
+          -8px -4px 8px 0px #ffffff,
+          8px 4px 12px 0px #d1d9e6;
+      }
+
+      .search-results {
+        transform: scale(1.5, 1.5);
+    }
+}
