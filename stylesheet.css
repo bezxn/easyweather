@@ -142,7 +142,7 @@ h1{
 }
 
 .search-results {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.1, 1.1);
 }
 
 @media all and (min-width: 632px) {
